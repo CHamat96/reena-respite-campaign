@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-raleway text-white scroll-smooth;
+  }
+
+  body {
+    @apply overflow-x-hidden;
+  }
+  
+  h1 {
+    @apply text-4xl font-extrabold uppercase lg:text-7xl 
+  }
+
+  h2 {
+    @apply text-2xl font-bold uppercase lg:text-4xl
+  }
+
+  p {
+    @apply text-base font-light leading-relaxed my-2 lg:text-lg leading-loose my-4
+  }
+
+  img {
+    @apply h-full w-auto
+  }
+
+  li {
+    @apply leading-relaxed font-light text-base lg:text-lg;
+  }
+
+  section {
+    @apply min-h-screen
+  }
+}
+
+@layer components {
+
+  .section-container {
+    @apply relative h-auto min-h-screen overflow-x-hidden;
+  }
+
+  .background-image {
+    @apply absolute bg-cover bg-clip-content bg-no-repeat w-full z-0 h-full min-h-screen; 
+  }
+
+  .blueBG {
+    @apply bg-blueRight bg-scroll
+  }
+
+  .content-wrapper {
+    @apply container flex relative z-10 items-center min-h-screen justify-start w-screen md:w-[1300px] max-w-[95%] py-12
+  }
+
+
+  .text-content {
+    @apply flex-col gap-8;
+  }
+
+  .gray-bg {
+    @apply bg-transGray shadow-md p-8;
+  }
+
+  .cta {
+    @apply flex items-center gap-4 text-lg hover:font-bold duration-300 ease-in-out
+  }
+
+  .cta-arrow::after {
+    @apply content-arrow duration-300 ease-in-out;
+  }
+
+  .cta-arrow:hover::after {
+    @apply scale-[1.2]
+  }
+
+  .cta-square::before {
+    @apply content-squareIcon duration-300 ease-in-out;
+  }
+  .cta-square:hover::before {
+    @apply fill-['#F4C916']
+  }
+
+
+  .gallery-img {
+    @apply h-[196px] w-auto lg:h-auto
+  }
+
+}
+
